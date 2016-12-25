@@ -1,0 +1,46 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/calendarView2"
+        android:onClick="dateClick"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:dateTextAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:unfocusedMonthDateColor="@android:color/holo_orange_dark"
+        android:weekNumberColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:text="Set Date"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="152dp"
+        android:layout_marginTop="22dp"
+        android:id="@+id/textView3"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_green_light"
+        android:textColorHighlight="@android:color/black" />
+
+    <Button
+        android:text="Set Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:onClick="sendMessage"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="?android:attr/colorEdgeEffect"
+        android:layout_below="@+id/calendarView2"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
+
