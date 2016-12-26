@@ -15,29 +15,15 @@ import android.widget.Toast;
 
 public class fin extends AppCompatActivity {
 
-    EditText phoneNo;
-    EditText message;
-    Button  button;
-    String ph;
-    String mess;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fin);
+//
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_MAIN);
+//        intent.addCategory(Intent.CATEGORY_LAUNCHER);
 
-        Intent yt = getIntent();
-//        ph = yt.getStringExtra("ph");
-//        mess = yt.getStringExtra("mess");
-
-        sendSMSMessage("+919717325200","helloo");
-
-    }
-
-    public void sendSMSMessage(String ph,String mess){
-        SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage(ph, null, mess, null, null);
-        Toast.makeText(this, "Message sent", Toast.LENGTH_LONG).show();
     }
 
 }

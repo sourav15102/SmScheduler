@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class phMess extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class phMess extends AppCompatActivity {
     EditText mess;
     String phone;
     String message;
+    TextView datime;
+    String finl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +30,12 @@ public class phMess extends AppCompatActivity {
         Intent qw = getIntent();
 
         old = qw.getLongExtra("old",0);
+        finl = qw.getStringExtra("finl");
+        datime = (TextView) findViewById(R.id.textView6);
         b = (Button) findViewById(R.id.button5);
         ph = (EditText) findViewById(R.id.editText3);
         mess = (EditText) findViewById(R.id.editText4);
+        datime.setText(finl);
 
     }
 

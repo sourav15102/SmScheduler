@@ -43,5 +43,12 @@ public class mAct extends BroadcastReceiver {
         smsManager.sendTextMessage(ph, null, mess, null, null);
 
         Toast.makeText(cf, "Message sent", Toast.LENGTH_LONG).show();
+
+        Intent i = new Intent();
+
+        i.setClass(cf.getApplicationContext(), fin.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        cf.startActivity(i);
+
     }
 }

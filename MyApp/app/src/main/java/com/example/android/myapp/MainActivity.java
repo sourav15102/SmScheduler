@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -27,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
     String year;
     String ph;
     String mess;
+    int fl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+            fl=0;
 //        Intent ip = getIntent();
 //        ph = ip.getStringExtra("ph");
 //        mess = ip.getStringExtra("mess");
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         calV.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView calendarView, int i, int i1, int i2) {
+                fl=1;
                 //change.setText("Date: " + i2 + " / " + i1 + " / " + i);
                 date = Integer.toString(i2);
                 mon = Integer.toString(i1+1);
@@ -55,15 +58,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public void sendMessage(View view) {
-        //change.setText(str);
+
+        if(fl==0)
+        {
+            Toast.makeText(this,"You have selected a date from past",Toast.LENGTH_LONG).show();
+            return;
+        }
+
         Intent intent2 = new Intent(this,time.class);
         intent2.putExtra("date", date);
         intent2.putExtra("month",mon);
         intent2.putExtra("year",year);
-//        intent2.putExtra("ph",ph);
-//        intent2.putExtra("mess",mess);
+
         startActivity(intent2);
     }
 }

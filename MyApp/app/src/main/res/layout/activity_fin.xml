@@ -51,4 +51,15 @@
         <!--android:layout_centerHorizontal="true"-->
         <!--android:layout_marginTop="66dp"-->
         <!--android:id="@+id/button2" />-->
+    <TextView
+        android:text="DONE!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="212dp"
+        android:id="@+id/textView7"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        tools:text="DONE!"
+        android:textColor="@android:color/holo_green_dark" />
 </RelativeLayout>

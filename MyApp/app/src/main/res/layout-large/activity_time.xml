@@ -8,8 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:id="@+id/textView2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@android:color/holo_green_dark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -19,8 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:id="@+id/button6"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@color/colorPrimaryDark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

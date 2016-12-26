@@ -100,7 +100,7 @@ public class time extends AppCompatActivity {
 
     public void tim(View view){
         //bot.setText(tv);
-
+        String finl = date+"/"+month+"/"+year+", "+hour+":"+min;
         Intent iy = new Intent(this,phMess.class);
 
         long curr = prepareCurr();
@@ -114,6 +114,7 @@ public class time extends AppCompatActivity {
         }
 
         iy.putExtra("old",old);
+        iy.putExtra("finl",finl);
 
         Toast.makeText(this,"Alarm is set",Toast.LENGTH_LONG).show();
         startActivity(iy);
