@@ -21,6 +21,7 @@ public class phMess extends AppCompatActivity {
     String message;
     TextView datime;
     String finl;
+    Button pb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +34,18 @@ public class phMess extends AppCompatActivity {
         finl = qw.getStringExtra("finl");
         datime = (TextView) findViewById(R.id.textView6);
         b = (Button) findViewById(R.id.button5);
-        ph = (EditText) findViewById(R.id.editText3);
-        mess = (EditText) findViewById(R.id.editText4);
+        ph = (EditText) findViewById(R.id.editText);
+        mess = (EditText) findViewById(R.id.editText5);
         datime.setText(finl);
+        pb = (Button) findViewById(R.id.button11);
+
+        pb.setOnClickListener(new Button.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 
